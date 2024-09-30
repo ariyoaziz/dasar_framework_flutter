@@ -55,6 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontSize: 24.0),
                   ),
                   Text(
+                    'Ariyo Aziz Pratama | 5220411184',
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                  Text(
                     'Ini adalah rangkuman materi pertemuan 2',
                     style: TextStyle(fontSize: 16.0),
                   ),
