@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
-    log('Counter: $_counter'); // Logging nilai counter
+    log('Counter: $_counter');
   }
 
   @override
