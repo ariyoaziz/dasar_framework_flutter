@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_aplikasi_2/pages/list_view_separated_page.dart';
 import 'package:flutter_aplikasi_2/pages/padding_page.dart';
 import 'center_page.dart';
 import 'sized_box_page.dart';
@@ -17,6 +18,9 @@ import 'image_network_page.dart';
 import 'image_local_page.dart';
 import 'penerapan_container_page.dart';
 import 'icon_page.dart';
+import 'list_view_builder_page.dart';
+import 'list_view_custom_page.dart';
+import 'list_view_default_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -71,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Ini adalah rangkuman materi pertemuan 2',
+                      'Rangkuman Materi 2',
                       style: TextStyle(fontSize: 16.0),
                     ),
                     Text(
@@ -336,10 +340,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // Bagian Akhir Row dan Column Halaman//
 
-//Ini adalh rangkuman pertemuan 3//
+//Ini adalh rangkuman Materi 3//
               const SizedBox(height: 50),
               const Text(
-                'ini adalah rangkuman pertemuan 3',
+                'Rangkuman Materi 3',
                 style: TextStyle(fontSize: 16),
               ),
               const Text('Flutter Component Lanjutan',
@@ -612,8 +616,137 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 80),
 // Bgaian Akhir Penerapan Container Asset Halaman //
+
+//Ini adalh rangkuman Materi 4//
+              const SizedBox(height: 50),
+              const Text(
+                'Rangkuman Materi 4',
+                style: TextStyle(fontSize: 16),
+              ),
+              const Text('Widget ListView',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
+
+// Bagian Halaman ListView.Builder//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListViewBuilderPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan ListView.Builder',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir ListView.Builder Halaman//
+
+// Bagian Halaman ListView.Sparated//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListViewSeparatedPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan ListView.Separated',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir ListView.Separated Halaman//
+
+// Bagian Halaman ListView.Custom//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListViewCustomPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan ListView.Custom',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir ListView.Custom Halaman//
+
+// Bagian Halaman ListView.Default//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ListViewDefaultPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan ListView.Default',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 80),
+// Bgaian Akhir ListView.Default Halaman//
             ],
           ),
         ),
