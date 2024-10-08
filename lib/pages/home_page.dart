@@ -1,7 +1,5 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:flutter_aplikasi_2/pages/list_view_separated_page.dart';
-import 'package:flutter_aplikasi_2/pages/padding_page.dart';
 import 'center_page.dart';
 import 'sized_box_page.dart';
 import 'text_page.dart';
@@ -11,6 +9,7 @@ import 'row_page.dart';
 import 'column_page.dart';
 import 'column_dan_row_page.dart';
 import 'stack_page.dart';
+import 'padding_page.dart';
 import 'align_page.dart';
 import 'elevated_button_page.dart';
 import 'text_field_page.dart';
@@ -19,8 +18,13 @@ import 'image_local_page.dart';
 import 'penerapan_container_page.dart';
 import 'icon_page.dart';
 import 'list_view_builder_page.dart';
+import 'list_view_separated_page.dart';
 import 'list_view_custom_page.dart';
 import 'list_view_default_page.dart';
+import 'grid_view_builder_page.dart';
+import 'grid_view_custom_page.dart';
+import 'grid_view_count_page.dart';
+import 'grid_view_extent_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -745,8 +749,137 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 80),
 // Bgaian Akhir ListView.Default Halaman//
+
+//Ini adalh rangkuman Materi 5//
+              const SizedBox(height: 50),
+              const Text(
+                'Rangkuman Materi 5',
+                style: TextStyle(fontSize: 16),
+              ),
+              const Text('Widget GridView',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
+
+// Bagian Halaman GridView.Builder//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GridViewBuilderPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan GridView.Builder',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir GridView.Builder Halaman//
+
+// Bagian Halaman GridView.Custom//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GridViewCustomPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan GridView.Custom',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir GridView.Custom Halaman//
+
+// Bagian Halaman GridView.Count//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GridViewCountPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan GridView.Count',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+// Bgaian Akhir GridView.Count Halaman//
+
+// Bagian Halaman GridView.Extent//
+              const SizedBox(height: 20.0),
+              SizedBox(
+                width: 333.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 11.0, horizontal: 32.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    elevation: 5, // Menambahkan efek bayangan
+                  ),
+                  onPressed: () {
+                    // Navigasi ke halaman Row dan Column
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GridViewExtentPage()),
+                    );
+                  },
+                  child: const Text(
+                    'Penggunan GridView.Extent',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 80),
+// Bgaian Akhir GridView.Extent Halaman//
             ],
           ),
         ),
