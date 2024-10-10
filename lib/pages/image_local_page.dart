@@ -21,18 +21,19 @@ class _ImageAssetPageState extends State<ImageAssetPage> {
         ),
       ),
       body: SafeArea(
-          child: Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: Image.asset(
-            'assets/img/img.jpg',
-            width: 300,
-            height: 300,
-            fit: BoxFit.cover,
-            filterQuality: FilterQuality.medium,
+        child: Center(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              'assets/img/img.jpg',
+              width: 300,
+              height: 300,
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.medium,
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }
